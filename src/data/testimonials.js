@@ -2,7 +2,7 @@ const testimonials = [
   {
     stars: 5,
     quote:
-      'Synthesis Labs delivered beyond our expectations. The attention to detail and design quality was outstanding — our customers noticed immediately.',
+      'Hasil kerja Synthesis Lab melebihi ekspektasi kami. Perhatian terhadap detail dan kualitas desainnya luar biasa — pelanggan kami langsung merasakan perbedaannya.',
     name: 'Andi Wijaya',
     role: 'CEO, Verdant Commerce',
     initials: 'AW',
@@ -10,7 +10,7 @@ const testimonials = [
   {
     stars: 5,
     quote:
-      'Working with them felt like having an in-house team. They understood our vision from day one and turned it into a beautiful, functional product.',
+      'Kerja sama dengan mereka terasa seperti punya tim internal sendiri. Mereka paham visi kami dari hari pertama dan mengubahnya jadi produk yang cantik dan fungsional.',
     name: 'Ratna Sari',
     role: 'Marketing Director, Nusantara Digital',
     initials: 'RS',
@@ -18,10 +18,10 @@ const testimonials = [
   {
     stars: 5,
     quote:
-      'Fast, professional, and incredibly talented. They built our entire platform in weeks, and the quality speaks for itself. Highly recommended.',
-    name: 'Budi Hartono',
+      'Cepat, profesional, dan sangat berbakat. Mereka membangun seluruh platform kami dalam hitungan minggu, dan kualitasnya bicara sendiri. Sangat direkomendasikan.',
+    name: 'Fajar Prasetyo',
     role: 'Founder, GreenPulse Analytics',
-    initials: 'BH',
+    initials: 'FP',
   },
 ]
 

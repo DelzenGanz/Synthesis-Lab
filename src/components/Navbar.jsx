@@ -20,7 +20,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-8 py-4">
         <a href="#" className="font-syne font-extrabold text-textMain text-lg tracking-tight">
-          SYNTHESIS<span className="text-light">.</span>LABS
+          SYNTHESIS<span className="text-light">.</span>LAB
         </a>
 
         <div className="hidden md:flex items-center gap-8">

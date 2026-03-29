@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 
 const waLink =
-  'https://wa.me/6281393091751?text=Halo%20Synthesis%20Labs%2C%20saya%20tertarik%20dengan%20layanan%20kalian.'
+  'https://wa.me/6281393091751?text=Halo%20Synthesis%20Lab%2C%20saya%20tertarik%20dengan%20layanan%20kalian.'
 
 export default function CTA() {
   return (

@@ -8,11 +8,11 @@ export default function Footer() {
           href="#"
           className="font-syne font-extrabold text-textMuted text-sm tracking-tight"
         >
-          SYNTHESIS<span className="text-light">.</span>LABS
+          SYNTHESIS<span className="text-light">.</span>LAB
         </a>
 
         <p className="font-mono text-xs text-textMuted text-center">
-          &copy; 2026 Synthesis Labs. Built in Semarang.
+          &copy; 2026 Synthesis Lab. Built in Semarang.
         </p>
 
         <div className="flex items-center gap-6">

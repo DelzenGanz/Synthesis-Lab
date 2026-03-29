@@ -2,14 +2,40 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 
 const waChat =
-  'https://wa.me/6281393091751?text=Halo%20Synthesis%20Labs%2C%20saya%20tertarik%20dengan%20layanan%20kalian.'
+  'https://wa.me/6281393091751?text=Halo%20Synthesis%20Lab%2C%20saya%20tertarik%20dengan%20layanan%20kalian.'
 const waCall = 'https://wa.me/6281393091751'
 
+const contactIcons = {
+  email: (
+    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+    </svg>
+  ),
+  chat: (
+    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+    </svg>
+  ),
+  location: (
+    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+    </svg>
+  ),
+  instagram: (
+    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+      <rect x="2" y="2" width="20" height="20" rx="5" />
+      <circle cx="12" cy="12" r="4.5" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  ),
+}
+
 const contactItems = [
-  { label: 'Email', value: 'shynthesislab@gmail.com', icon: '✉' },
-  { label: 'WhatsApp', value: '+62 8139 3091 751', icon: '💬', href: waChat },
-  { label: 'Location', value: 'Kota Semarang, Jawa Tengah, Indonesia', icon: '📍' },
-  { label: 'Instagram', value: '@shyntesislab.id', icon: '📸', href: 'https://instagram.com/shyntesislab.id' },
+  { label: 'Email', value: 'shynthesislab@gmail.com', icon: contactIcons.email },
+  { label: 'WhatsApp', value: '+62 8139 3091 751', icon: contactIcons.chat, href: waChat },
+  { label: 'Location', value: 'Kota Semarang, Jawa Tengah, Indonesia', icon: contactIcons.location },
+  { label: 'Instagram', value: '@shyntesislab.id', icon: contactIcons.instagram, href: 'https://instagram.com/shyntesislab.id' },
 ]
 
 const reveal = {
@@ -166,7 +192,7 @@ export default function Contact() {
           <div className="space-y-4 mb-8">
             {contactItems.map((item) => (
               <div key={item.label} className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-mid/10 border border-mid/20 flex items-center justify-center text-sm shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-mid/10 border border-mid/20 flex items-center justify-center text-light shrink-0">
                   {item.icon}
                 </div>
                 <div>
@@ -216,7 +242,11 @@ export default function Contact() {
 
           {/* Response time note */}
           <div className="flex items-start gap-3 bg-card border border-mid/20 rounded-lg p-4">
-            <div className="text-light text-sm mt-0.5">⚡</div>
+            <div className="text-light mt-0.5">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+              </svg>
+            </div>
             <div>
               <p className="font-syne font-bold text-xs text-textMain mb-1">
                 Respon Cepat

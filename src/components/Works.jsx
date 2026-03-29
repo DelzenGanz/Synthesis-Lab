@@ -16,27 +16,36 @@ function WorkCard({ work, isFirst }) {
     <motion.div
       className={`relative overflow-hidden rounded-lg border-2 border-transparent group ${
         isFirst ? 'md:col-span-2 aspect-[21/9]' : 'aspect-video'
-      } ${work.bgClass}`}
+      } bg-card`}
       variants={itemVariants}
       whileHover={{
         borderColor: '#a8d5b5',
       }}
     >
-      {/* Hover overlay */}
-      <motion.div
-        className="absolute inset-0 bg-light/5"
-        initial={{ opacity: 0 }}
-        whileHover={{ opacity: 1 }}
+      {/* Project screenshot */}
+      <img
+        src={work.image}
+        alt={work.title}
+        className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
       />
 
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+
+      {/* Hover overlay */}
+      <div className="absolute inset-0 bg-light/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
       {/* Info overlay */}
-      <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 to-transparent">
-        <div className="font-mono text-[9px] tracking-widest uppercase text-light mb-2">
+      <div className="absolute bottom-0 left-0 right-0 p-6">
+        <div className="font-mono text-[9px] tracking-widest uppercase text-light mb-1.5">
           {work.category}
         </div>
-        <h3 className="font-syne font-bold text-lg text-textMain">
+        <h3 className="font-syne font-bold text-lg text-textMain mb-1">
           {work.title}
         </h3>
+        <p className="font-mono text-xs text-textMuted/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          {work.description}
+        </p>
       </div>
     </motion.div>
   )
