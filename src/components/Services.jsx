@@ -33,11 +33,11 @@ function ServiceCard({ service, index }) {
         {String(index + 1).padStart(2, '0')}
       </div>
 
-      <h3 className="font-syne font-bold text-xl text-textMain mb-3">
+      <h3 className="font-syne font-bold text-2xl text-textMain mb-4">
         {service.title}
       </h3>
 
-      <p className="font-mono text-xs text-textMuted leading-relaxed mb-7">
+      <p className="font-mono text-sm text-textMuted leading-relaxed mb-7">
         {service.description}
       </p>
 
@@ -45,7 +45,7 @@ function ServiceCard({ service, index }) {
         {service.tags.map((tag) => (
           <span
             key={tag}
-            className="border border-mid text-accent text-[10px] px-3 py-1 rounded-full font-mono"
+            className="border border-mid text-accent text-xs px-3 py-1 rounded-full font-mono"
           >
             {tag}
           </span>
@@ -57,7 +57,7 @@ function ServiceCard({ service, index }) {
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+    <section id="services" className="relative py-24 px-6 md:px-12 max-w-7xl mx-auto overflow-hidden">
       <motion.div
         className="flex items-center gap-3 mb-6"
         initial={{ opacity: 0, y: 24 }}

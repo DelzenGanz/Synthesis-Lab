@@ -15,27 +15,20 @@ const services = [
   },
   {
     id: 3,
-    title: 'Brand Identity',
-    description:
-      'Logos, color systems, typography, and brand guidelines that give your business a distinct and memorable presence.',
-    tags: ['Logo Design', 'Guidelines', 'Visual Identity'],
-  },
-  {
-    id: 4,
-    title: 'E-Commerce',
+    title: 'E-commerce',
     description:
       'End-to-end online store solutions with secure payment integration, inventory management, and optimized checkout flows.',
     tags: ['Shopify', 'WooCommerce', 'Payment Gateway'],
   },
   {
-    id: 5,
+    id: 4,
     title: 'API Integration',
     description:
       'Seamless third-party integrations — payment gateways, CRMs, analytics, and custom REST/GraphQL API development.',
     tags: ['REST API', 'GraphQL', 'Webhooks'],
   },
   {
-    id: 6,
+    id: 5,
     title: 'Company Profile',
     description:
       'Professional company profile websites that communicate trust, credibility, and your unique value proposition.',

@@ -32,8 +32,13 @@ const reveal = {
 
 export default function About() {
   return (
-    <section id="about" className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
-      <div className="grid md:grid-cols-2 gap-20 items-center">
+    <section id="about" className="relative py-24 px-6 md:px-12 max-w-7xl mx-auto overflow-hidden">
+      {/* Ambient glow */}
+      <div
+        className="glow-orb w-[400px] h-[400px] -top-20 right-0 bg-[#285A48]"
+        style={{ animation: 'float-glow-reverse 14s ease-in-out infinite' }}
+      />
+      <div className="grid md:grid-cols-2 gap-20 items-center relative z-10">
         {/* Left column */}
         <motion.div {...reveal}>
           <div className="flex items-center gap-3 mb-6">

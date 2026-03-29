@@ -14,6 +14,20 @@ const stats = [
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-24 pb-16 overflow-hidden">
+      {/* Ambient gradient orbs */}
+      <div
+        className="glow-orb w-[600px] h-[600px] -top-40 -left-40 bg-[#285A48]"
+        style={{ animation: 'float-glow 12s ease-in-out infinite' }}
+      />
+      <div
+        className="glow-orb w-[500px] h-[500px] -bottom-20 -right-32 bg-[#1a4a3a]"
+        style={{ animation: 'float-glow-reverse 15s ease-in-out infinite' }}
+      />
+      <div
+        className="glow-orb w-[300px] h-[300px] top-1/3 right-1/4 bg-[#3d8a6e]"
+        style={{ animation: 'float-glow 18s ease-in-out infinite 3s', opacity: 0.08 }}
+      />
+
       {/* Dot grid background */}
       <div
         className="absolute inset-0 opacity-20"
@@ -25,6 +39,9 @@ export default function Hero() {
           WebkitMaskImage: 'radial-gradient(ellipse at center, black 30%, transparent 70%)',
         }}
       />
+
+      {/* Top-to-bottom gradient fade */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-bg" />
 
       <div className="relative z-10 max-w-4xl">
         <motion.div
@@ -55,8 +72,8 @@ export default function Hero() {
           {...fadeUp}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          A two-person digital agency crafting premium websites, brands, and
-          web applications for businesses that refuse to blend in.
+          Synthesizing Flawless Code and Modern Aesthetics — a two-person
+          digital studio crafting premium websites and web applications.
         </motion.p>
 
         <motion.div

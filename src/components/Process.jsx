@@ -13,8 +13,17 @@ const itemVariants = {
 
 export default function Process() {
   return (
-    <section className="py-24 px-6 md:px-12 bg-bg2">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative py-24 px-6 md:px-12 bg-bg2 overflow-hidden">
+      {/* Ambient glows */}
+      <div
+        className="glow-orb w-[500px] h-[500px] -top-32 left-1/4 bg-[#1a4a3a]"
+        style={{ animation: 'float-glow 16s ease-in-out infinite 2s' }}
+      />
+      <div
+        className="glow-orb w-[350px] h-[350px] -bottom-20 right-1/6 bg-[#285A48]"
+        style={{ animation: 'float-glow-reverse 13s ease-in-out infinite' }}
+      />
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           className="flex items-center gap-3 mb-6"
           initial={{ opacity: 0, y: 24 }}

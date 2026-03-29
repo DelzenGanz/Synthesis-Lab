@@ -1,13 +1,26 @@
 import { motion } from 'framer-motion'
 
 const waLink =
-  'https://wa.me/6281234567890?text=Halo%20Synthesis%20Labs%2C%20saya%20tertarik%20dengan%20layanan%20kalian.'
+  'https://wa.me/6281393091751?text=Halo%20Synthesis%20Labs%2C%20saya%20tertarik%20dengan%20layanan%20kalian.'
 
 export default function CTA() {
   return (
     <section className="relative py-32 px-6 text-center overflow-hidden">
       {/* Radial glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#285A4820_0%,transparent_70%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#285A4830_0%,transparent_70%)]" />
+      {/* Floating ambient orbs */}
+      <div
+        className="glow-orb w-[500px] h-[500px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#285A48]"
+        style={{ animation: 'float-glow 10s ease-in-out infinite', opacity: 0.18 }}
+      />
+      <div
+        className="glow-orb w-[300px] h-[300px] top-0 -left-20 bg-[#3d8a6e]"
+        style={{ animation: 'float-glow-reverse 14s ease-in-out infinite', opacity: 0.1 }}
+      />
+      <div
+        className="glow-orb w-[250px] h-[250px] -bottom-10 -right-16 bg-[#1a4a3a]"
+        style={{ animation: 'float-glow 12s ease-in-out infinite 4s', opacity: 0.12 }}
+      />
 
       <div className="relative z-10 max-w-2xl mx-auto">
         <motion.h2
